@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="country">
+      <h2>{{ country }}</h2>
+  </div>
+  <div class="entries">
+      <p>Number of entries</p>
+      <p>{{ numberOfEntries }}</p>
+  </div>
+  <div class="medals">
+      <p>Total number medals</p>
+      <p>{{ totalNumberMedals }}</p>
+  </div>
+  <div class="athletes">
+      <p>Total number of athletes</p>
+      <p>{{ totalNumberOfAthletes }}</p>
+  </div>
+  <div class="lineChart">
+      <ngx-charts-line-chart
+        [results]="lineChart"
+        [view]="[windowWidth, 400]"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Dates'"
+        [yAxisLabel]="'Medals'">
+      </ngx-charts-line-chart>
+  </div>
+  <div class="button">
+    <button (click)="goHome()">   Home  </button>
+  </div>
+</div>
